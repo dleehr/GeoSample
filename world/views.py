@@ -20,7 +20,7 @@ def search_form(request):
 			except ObjectDoesNotExist:
 				feature = None
 			# Also find things say, within 100 miles?
-			nearby= WorldBorder.objects.filter(mpoly__distance_lte=(cd['point'], Distance(mi=100)))
+			nearby= WorldBorder.objects.filter(mpoly__distance_lte=(cd['point'], Distance(mi=1000))).distance(cd['point']).order_by('distance')
 			response_dict = {'feature': feature, 'nearby': nearby}
 			return render(request, 'search_results.html', response_dict)
 

@@ -7,12 +7,13 @@
     <div>
         <h2>Results:</h2>
         <p>Country at Point: {{ feature }}</p>
-        <p>Borders within 100 mi:</p>
-        <ul>
+        <p>Borders within 1000 mi:</p>
+        <table>
+            <tr><th>Country</th><th>Distance (mi)</th></tr>
         {% for near in nearby %}
-            <li>{{ near }}</li>
+            <tr><td>{{ near.name }}</td><td>{{ near.distance.mi }}</td></tr>
         {% endfor %}
-        </ul>
+        </table>
 
     </div>
 </body>
