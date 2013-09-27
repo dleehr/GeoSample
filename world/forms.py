@@ -1,5 +1,4 @@
-from django import forms
+from django.contrib.gis import forms
 
 class SearchForm(forms.Form):
-	lat = forms.CharField('Latitude')
-	lon = forms.CharField('Longitude')
+	point = forms.PointField(widget=forms.OpenLayersWidget())

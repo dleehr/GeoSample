@@ -1,11 +1,14 @@
 <html>
 <head>
     <title>Search</title>
+    <script src="http://openlayers.org/api/2.11/OpenLayers.js"></script>
+    <script src="/static/gis/js/OLMapWidget.js"></script>
+
 </head>
 <body>
     <form action="" method="post">
         <table>
-            {{ form.as_table }}
+            {{ form.as_p }}
         </table>
         {% csrf_token %}
         <input type="submit" value="Search">

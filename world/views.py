@@ -12,14 +12,12 @@ def search_form(request):
 		form = SearchForm(request.POST)
 		if form.is_valid():
 			cd = form.cleaned_data
-			lat = float(cd['lat'])
-			lon = float(cd['lon'])
 			# Now find the objects
-			p = Point(lat, lon)
-			feature = WorldBorder.objects.get(mpoly__intersects=p)
-			response_dict = {'lat': lat, 'lon': lon, 'feature': feature}
+			feature = WorldBorder.objects.get(mpoly__intersects=cd['point'])
+			response_dict = {'feature': feature}
 			return render(request, 'search_results.html', response_dict)
 
 	else:
 		form = SearchForm
+		# gis/openlayers-osm.html?
 		return render(request, 'search_form.html', {'form': form })
