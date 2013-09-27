@@ -6,7 +6,14 @@
 <body>
     <div>
         <h2>Results:</h2>
-        <span>{{ feature }}</span>
+        <p>Country at Point: {{ feature }}</p>
+        <p>Borders within 100 mi:</p>
+        <ul>
+        {% for near in nearby %}
+            <li>{{ near }}</li>
+        {% endfor %}
+        </ul>
+
     </div>
 </body>
 </html>
