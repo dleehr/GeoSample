@@ -120,6 +120,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
 	'django.contrib.gis',
+	'bootstrap_toolkit',
 	'world'
 )
 

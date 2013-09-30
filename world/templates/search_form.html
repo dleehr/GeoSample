@@ -1,16 +1,19 @@
-<html>
-<head>
-    <title>Search</title>
+{% extends 'base.html' %}
+{% load bootstrap_toolkit %}
+
+{% block extra_head %}
     <script src="http://openlayers.org/api/2.11/OpenLayers.js"></script>
     <script src="/static/gis/js/OLMapWidget.js"></script>
+{% endblock %}
 
-</head>
-<body>
-    <p class="lead">Select a point on the map and click search to identify a country.</p>
+{% block content %}
+<div class="container">
+<h2>GeoSample Search:</h2>
+<p class="lead">Select a point on the map and click search to identify a country.</p>
     <form action="" method="post">
         {{ form.as_p }}
         {% csrf_token %}
-        <input type="submit" value="Search">
+        <input type="submit" value="Search" class="btn btn-primary">
     </form>
-</body>
-</html>
+</div>
+{% endblock %}

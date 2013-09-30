@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Search Results</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load bootstrap_toolkit %}
+{% block content %}
+    <div class="container">
         <h2>Results:</h2>
-        <p>Country at Point: {{ feature }}</p>
+        <p class="lead">Country at Point: <strong>{{ feature }}</strong></p>
         <p>Borders within 1000 mi:</p>
-        <table border="2">
+        <table class="table">
             <tr><th>Country</th><th>Distance (mi)</th></tr>
         {% for near in nearby %}
             <tr><td>{{ near.name }}</td><td>{{ near.distance.mi }} {{ near.centroid }}</td>
             </tr>
         {% endfor %}
         </table>
-</body>
-</html>
+    </div>
+{% endblock %}
