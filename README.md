@@ -14,7 +14,7 @@ Additional detailed dependencies are listed in `requirements.txt` and can be ins
 
 ## Installation
 
-This was an exercise in a tutorial, so the [GeoDjango tutorial](https://docs.djangoproject.com/en/dev/ref/contrib/gis/tutorial/) would be the best reference.
+This was an exercise in a tutorial, so the [GeoDjango tutorial](https://docs.djangoproject.com/en/dev/ref/contrib/gis/tutorial/) would be the best reference.  Also, there are hard-coded local paths `/Users/dan/...` in settings.py that would need to be changed.  I'm aware that my secret key was not scrubbed out of the file either, but yes, this is a demo.
 
 ## Screenshots
 
