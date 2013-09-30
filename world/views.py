@@ -24,7 +24,8 @@ def search_form(request):
 			# Slice the first element off the front if we found a feature
 			if feature:
 				nearby = nearby[1:]
-			response_dict = {'feature': feature, 'nearby': nearby}
+			point = "(%.3f, %.3f)" % (cd['point'][0], cd['point'][1])
+			response_dict = {'feature': feature, 'point': point, 'nearby': nearby}
 			return render(request, 'search_results.html', response_dict)
 
 	else:
