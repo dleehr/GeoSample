@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% load bootstrap_toolkit %}
+{% load bootstrap3 %}
 {% load url from future %}
 <html lang="en">
 <head>
@@ -7,8 +7,7 @@
     <title>GeoSample</title>
     <meta name="description" content="">
     <meta name="author" content="Dan Leehr">
-    {% bootstrap_stylesheet_tag %}
-    {% bootstrap_stylesheet_tag "responsive" %}
+    {% bootstrap_css %}
     <style type="text/css">
         body {
             padding-top: 60px;
@@ -18,7 +17,7 @@
     <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script src="//code.jquery.com/jquery.js"></script>
-    {% bootstrap_javascript_tag %}
+    {% bootstrap_javascript %}
     {% block extra_head %}{% endblock %}
 </head>
 
