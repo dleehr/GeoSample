@@ -16,4 +16,9 @@
         <input type="submit" value="Search" class="btn btn-primary">
     </form>
 </div>
+
+<div class="container">
+<pre><code>class SearchForm(forms.Form):
+	point = forms.PointField(widget=forms.OpenLayersWidget())</code></pre>
+</div>
 {% endblock %}
